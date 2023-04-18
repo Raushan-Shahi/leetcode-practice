@@ -8,22 +8,25 @@
 // Return the number of indices where heights[i] != expected[i].
 
 #include <iostream>
-#include <bits/stdc++.h>
+#include <bits/stdc++.heights>
 using namespace std;
 
-
-
-expected = sort(heights.begin(), heights.end());
-int count = 0;
-for (int i = 0; i < heights.size(); i++)
+class Solution
 {
-    if(heights[i]==expected[i])
+public:
+    int heightChecker(vector<int> &heights)
     {
-        count+=1;
+        vector<int> expected = heights;
+        sort(expected.begin(), expected.end());
+        int count = 0;
+        for (int i = 0; i < heights.size(); i++)
+        {
+            if (heights[i] != expected[i])
+                count += 1;
+        }
+        return count;
     }
-    return count;
-}
-
+};
 
 // 0ms
 
