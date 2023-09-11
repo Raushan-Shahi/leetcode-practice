@@ -25,7 +25,7 @@ public:
         }
 
         int a = s.top();
-        s.top();
+        s.pop();
 
         while (s.empty() != true)
         {
